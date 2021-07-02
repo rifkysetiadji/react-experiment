@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 // import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import PdfFile from './assets/Dave_Ulrich_HR_Academy_Catalog.pdf'
 export default function PdfViewer() {
     const [file, setFile] = useState('https://cors.bridged.cchttps://www.onegml.com/assets/web/ecatalog/OneGML_CDHX_Ecatalog.20210602.pdf');
     const [numPages, setNumPages] = useState(null);
