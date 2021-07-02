@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import PdfViewer from './PdfViewer'
+import Preview from './Preview'
+import Video from './Video'
+import Encrypt from './encrypt'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <PdfViewer/>
+     {/* <Preview/> */}
+     {/* <Encrypt/> */}
     </div>
   );
 }
