@@ -75,7 +75,6 @@ export default function Excel() {
         alignSetting('W1','center')
 
         sheet1.mergeCells('X1','AA2')
-        // sheet1.mergeCells('X1','X2')
         sheet1.getCell('X1').value="IQ"
         sheet1.getCell('X3').value="Subtest 1"
         sheet1.getCell('Y3').value="Subtest 2"
@@ -91,6 +90,38 @@ export default function Excel() {
         alignSetting('Z3','center')
         fontSetting('AA3')
         alignSetting('AA3','center')
+
+
+        //papi
+        sheet1.mergeCells('AB1','AU2')
+        sheet1.getCell('AB1').value="PAPIKostick"
+        fontSetting('AB1')
+        alignSetting('AB1','center')
+
+        let papi_address=['AB','AC','AD','AE','AF','AG','AH','AI','AJ','AK','AL','AM','AN','AO','AP','AQ','AR','AS','AT','AU']
+        let papi_title=['N','G','A','L','P','I','T','V','X','S','B','O','R','D','C','Z','E','K','F','W']
+        papi_address.map((d,i)=>{
+            sheet1.getCell(`${d}3`).value=papi_title[i]
+            fontSetting(`${d}3`)
+            alignSetting(`${d}3`,'center')
+        })
+
+
+        //toefl
+        sheet1.mergeCells('AV1','AV3')
+        sheet1.getCell('AV1').value="TOEFL"
+        fontSetting('AV1')
+        alignSetting('AV1','center')
+
+        sheet1.mergeCells('AW1','AW3')
+        sheet1.getCell('AW1').value="Klasifikasi TOEFL"
+        fontSetting('AW1')
+        alignSetting('AW1','center')
+
+        sheet1.mergeCells('AX1','AX3')
+        sheet1.getCell('AX1').value="Presentase Kesesuaian"
+        fontSetting('AX1')
+        alignSetting('AX1','center')
 
 
         sheet1.eachRow(function(row, rowNumber) {
